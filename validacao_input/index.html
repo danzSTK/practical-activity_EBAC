@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ebac Banking</h1>
+        </header>
+        <form id="form">
+            <h2>Deposito</h2>
+            <div class="inputs">
+                <label>Nome Beneficiário</label>
+                <input id="nome-Beneficiario" type="text" placeholder="Nome completo Beneficiário" required>
+                <p class="message-erro">
+                    O nome não está completo
+                </p>
+            </div>
+            <div class="inputs">
+                <label for="numero-ct">Número da conta</label>
+                <input id="numero-Conta" type="number" name="numero-ct" placeholder="Número da conta Beneficiário" required>
+            </div>
+            <div class="inputs">
+                <label for="Valor">Valor Deposito</label>
+                <input id="valor" type="number" name="Valor" placeholder="Valor do Deposito" required>
+            </div>
+            <button type="submit">Depositar</button>
+            <p class="message-sucess"></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
