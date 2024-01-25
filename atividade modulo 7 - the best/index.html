@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <div class="lado-esquerdo">
+            <h1>Seja bem vindo</h1>
+            <img src="./img/otaku-amico.svg" alt="Logo">
+        </div>
+        <div class="lado-direito">
+            <form id="card-login" class="card">
+                <h1>Calcula idade</h1>
+                <div class="inputs">
+                    <label>Ano Base</label>
+                    <input id="anoBase" type="number" placeholder="Insira o ano que deseja descobrir" required>
+                </div>
+                <div class="inputs">
+                    <label>Ano Final</label>
+                    <input id="anoFinal" type="number" placeholder="Insira o ano final" required>
+                    <P class="mensagem-Erro"></P>
+                </div>
+                <button type="submit">Calcule</button>
+
+                <p class="mensagem-sucesso"></p>
+            </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
