@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: #fff;
+}
+.container {
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+header{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    padding: 20px;
+}
+
+header h1{
+    width: 100vw;
+    font-size: 7vw;
+}
+
+header h5 {
+    width: 100vw;
+    font-size: 2.5vw;
+    margin-top: -3vw;
+}
+
+.inputs{
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 3vw;
+}
+
+.inputs input {
+    width: 45vw;
+    padding: 1.5vw;
+    border: none;
+    background-color: #8b8b8b57;
+    border-radius: 16px;
+    outline: none;
+    font-size: 12pt;
+    color: #fff;
+}
+
+.inputs button {
+    width: 10vw;
+    padding: 1.4vw;
+    border: none;
+    background-color: #3490ffd9;
+    font-size: 10pt;
+    font-weight: 900;
+    border-radius: 16px;
+    color: #fff;
+}
+
+.listas{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #00000055 ;
+    padding: 2vw;
+    color: #cccc;
+}
+
+.listas li{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+}
+button{
+    cursor: pointer;
+}
+button:hover{
+    scale: 1.1;
+}
+.listas button{
+    display: flex;
+    text-align: center;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    font-weight: 600;
+    
+}
+li button{
+    color: red;
+}
+.underline{
+    color: green;
+    text-decoration: line-through;
+}
