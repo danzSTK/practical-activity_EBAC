@@ -1,5 +1,17 @@
 @use 'reset.scss';
 @use 'variaveis.scss';
+
+@mixin buttonBuy(){
+    display: block;
+    background-color: #44bd32;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
 body{
     background-color: variaveis.$corPrincipal;
 }
@@ -12,4 +24,91 @@ li{
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+}
+
+header {
+    background-color: variaveis.$corheader;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+
+        nav{
+            .menu{
+                display: flex;
+
+                li{
+                    font-weight: bold;
+                    margin-left: 24px;
+
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section {
+    padding: 56px 0;
+
+    .container{
+        .products{
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 32.66%);
+            column-gap: 1%;
+            row-gap: 4%;
+            width: 100%;
+
+            .product-item{
+                img{
+                    width: 100%;
+                    border-radius: 16px;
+                }
+                .product-button {
+                    @include buttonBuy();
+
+                    &:hover{
+                        background-color: lighten(variaveis.$buttonsColorbuy, 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+    .container {
+        max-width: 80%;
+    }
+    section{
+        .container{
+            .products {
+                grid-template-columns: repeat(2, 48.5%);
+                column-gap: 3%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile){
+    section{
+        .container{
+            .products {
+                display: block;
+
+                .product-item{
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
 }
