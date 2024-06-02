@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function(){
     const user = 'danzSTK';
     const apiSrc = `https://api.github.com/users/${user}`
-    // const token = ; // --> Seu token de validação aqui para a utilização dessa APi
-    fetch(apiSrc, //{
-        //headers:{
-        //    'Authorization': `token ${token}`
-        //}
-    /* } */).then(function(resposta){
+    // const token =  ; // --> Seu token de validação aqui para a utilização dessa APi
+    fetch(apiSrc, {
+        headers:{
+            'Authorization': `token ${token}`
+        }
+    }).then(function(resposta){
         return resposta.json()
     })
         .then(function(json){
