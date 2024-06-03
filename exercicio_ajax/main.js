@@ -1,17 +1,12 @@
 document.addEventListener('DOMContentLoaded', function(){
     const user = 'danzSTK';
     const apiSrc = `https://api.github.com/users/${user}`
-    // const token =  ; // --> Seu token de validação aqui para a utilização dessa APi
-    fetch(apiSrc, {
-        headers:{
-            'Authorization': `token ${token}`
-        }
-    }).then(function(resposta){
+
+    fetch(apiSrc).then(function(resposta){
         return resposta.json()
     })
         .then(function(json){
             const profilePhoto = json.avatar_url;
-            console.log(profilePhoto)
             const followers = json.followers;
             const following = json.following;
             const repositorios = json.public_repos;
@@ -39,13 +34,10 @@ document.addEventListener('DOMContentLoaded', function(){
             
             addInfos()
         })
-        /* .catch(
+        /*.catch(
             alert("Ops! Encontramos um erro em nossos servidores."),
             alert('tente novamente mais tarde'),
             document.body.style.backgroundColor = '#1e1e1e',
             document.body.innerHTML = '<h1 style=" text-transform: uppercase; color: #ccc; width: 100vw; text-align: center; font-family: sans-serif; position: absolute; top: 50%; left:0; transform: translateY(-50%);">Ops! Tente novamente mais tarde<h1>'
-        ) */
-        .finally(function(){
-            console.log('Olá')
-        })
+        )*/ 
 });
