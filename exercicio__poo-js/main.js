@@ -1,3 +1,5 @@
+// Fiz funções simples, mas ok.
+
 function Aluno(nome, idade){
     this.nome = nome;
     this.idade = idade;
@@ -20,7 +22,6 @@ function Professor(nome, idade, salario){
 
 function Dev(nome, idade, cargo, salario){
     this.cargo = cargo
-
 
     this.apresentaDev = () =>{
         console.log('Olá, meu nome é ' + this.nome + ' e tenho ' + this.idade +  ' anos. Sou ' + this.cargo + ' e recebo: R$' + salario)
