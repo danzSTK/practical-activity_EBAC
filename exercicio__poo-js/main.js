@@ -1,47 +1,54 @@
 // Fiz funções simples, mas ok.
 
-function Aluno(nome, idade){
+function Pessoa(nome, idade){
     this.nome = nome;
     this.idade = idade;
+}
+function Funcionario(nome, idade, cargo, salario){
+    this.cargo = cargo;
+    this.salario = salario; 
 
-    this.apresentaAluno = () =>{
-        console.log('Olá, meu nome é ' + this.nome + ' e tenho ' + this.idade +' anos, sou aluno')
+    Pessoa.call(this, nome, idade);
+}
+function Aluno(nome, idade, curso){
+    this.curso = curso
+
+
+    this.alunoFala = () =>{
+        console.log('Olá! Meu nome é ' + this.nome + ' e tenho ' + this.idade + ' anos e estou cursando ' + this.curso + ' atualmente.')
     }
+    Pessoa.call(this, nome, idade)
 }
 
-function Professor(nome, idade, salario){
-    this.salario = salario;
+function Professor(nome, idade, cargo, salario, empresa){
+    this.empresa = empresa
 
-    this.apresentaProfessor = () => {
-        console.log('Olá, meu nome é ' + this.nome + ' e tenho ' + this.idade +' anos, sou da Professor e recebo: R$' + this.salario)
+    this.professorFala = () =>{
+        console.log('Olá! Meu nome é ' + this.nome + ' e tenho ' + this.idade + ' anos e atualmente trabalho na ' + this.empresa + ' com o cargo de ' + this.cargo + ' e meu salário atualmente é: R$' + this.salario )
     }
 
-    Aluno.call(this, nome, idade)
+    Funcionario.call(this, nome, idade, cargo, salario)
 }
 
+function Dev(nome, idade, cargo, salario, empresa, tecnologia){
+    this.tecnologia = tecnologia
 
-function Dev(nome, idade, cargo, salario){
-    this.cargo = cargo
-
-    this.apresentaDev = () =>{
-        console.log('Olá, meu nome é ' + this.nome + ' e tenho ' + this.idade +  ' anos. Sou ' + this.cargo + ' e recebo: R$' + salario)
+    this.devFala = () =>{
+        console.log('Olá! Meu nome é ' + this.nome + ' e tenho ' + this.idade + ' anos e atualmente trabalho na ' + this.empresa + ' com o cargo de ' + this.cargo + ' e meu salário atualmente é: R$' + this.salario + '. Minha tecnoligia principal atual é ' + this.tecnologia)
     }
 
-    Professor.call(this, salario)
-    Aluno.call(this, nome, idade)
+    Professor.call(this, undefined, undefined, undefined, undefined, empresa)
+    Funcionario.call(this, nome, idade, cargo, salario)
 }
 
 
-const professor = new Professor('Daniel', 27, 2500)
-const aluno = new Aluno('Matheus', 16)
-const dev = new Dev('Carlos', 19, 'Desenvolvedor Front-end', 3000)
 
 
-function apresentacao(){
-    console.log(professor.apresentaProfessor())
-    console.log(aluno.apresentaAluno())
-    console.log(dev.apresentaDev())
+const aluno = new Aluno('Matheus', 14, 'Libras')
+const professor = new Professor('Carlos', 40, 'Professor', 4500, 'Colegio Acadêmico');
+const dev = new Dev('Daniel', 19, 'Desenvolvedor back-end', 6000, 'Spotify', 'Java');
 
-}
+console.log(aluno.alunoFala())
+console.log(professor.professorFala())
+console.log(dev.devFala())
 
-apresentacao()
