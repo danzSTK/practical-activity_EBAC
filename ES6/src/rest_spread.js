@@ -63,5 +63,8 @@ const {motor: motorDoCarroDaJulia} = carroDaJulia;
 
 const [item1, item2, item3, ...outrosTimes] = timesDeFutebol;
 
-console.log()
+console.log(item1)
+console.log(item2)
+console.log(item3)
+console.log(outrosTimes)
 
