@@ -14,6 +14,10 @@ const EstiloGlobal = createGlobalStyle`
     @media (max-width: 768px){
       padding-top: 16px;
     }
+
+    li{
+      list-style: none;
+    }
   }
 `
 
