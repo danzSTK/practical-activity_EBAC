@@ -11,8 +11,11 @@ const Aside = styled.aside`
     margin-top: 16px;
   }
 `
+type Props = {
+  trocaTema: () => void
+}
 
-const Sidebar = () => (
+const Sidebar = (props: Props) => (
   <Aside>
     <SiderbarContainer>
       <Avatar />
@@ -23,7 +26,9 @@ const Sidebar = () => (
       <Descricao tipo="principal" fontSize={12}>
         Engenheiro Front-end
       </Descricao>
-      <BotaoTema type="button">Trocar Tema</BotaoTema>
+      <BotaoTema type="button" onClick={props.trocaTema}>
+        Trocar Tema
+      </BotaoTema>
     </SiderbarContainer>
   </Aside>
 )
